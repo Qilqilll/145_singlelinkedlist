@@ -31,6 +31,7 @@ void addNode() {
 		START = nodeBaru;
 		return;
 	}
+
 	Node* previous = START;
 	Node* current = START;
 
@@ -44,11 +45,12 @@ void addNode() {
 		previous == current;
 		current = current->next;
 	}
+
 	nodeBaru->next = current;
 	previous->next = nodeBaru;
 }
 
-bool serachNode(int, Node* current, Node* previous) {
+bool serachNode(int nim, Node* current, Node* previous) {
 	previous = START;
 	current = START;
 	while (current != NULL && nim > current->noMhs)
@@ -131,5 +133,16 @@ void searchData() {
 
 int main() {
 	int pilihan;
-	
-}
+	do
+	{
+		try
+		{
+			cout << "1. Tambah Data" << endl;
+			cout << "2. Hapus Data" << endl;
+			cout << "3. Tampilkan Data" << endl;
+			cout << "4. Cari Data" << endl;
+			cout << "5. Keluar" << endl;
+			cout << "Pilihan:";
+			cin >> pilihan;
+			switch (pilihan)
+			
