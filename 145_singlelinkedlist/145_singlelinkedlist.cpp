@@ -172,4 +172,7 @@ int main() {
 				}
 				else
 					cout << "Data Tidak Ditemukan" << endl;
+			case 3:
+				traverse();
+				break;
 			
